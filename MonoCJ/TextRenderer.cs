@@ -63,7 +63,17 @@ namespace MonoCJ
             int spotIncr = 0;
             for (int i = listNdx; i >= 0; i--)
             {
-                yStep = font.MeasureString(textList[i]).Y;
+                Vector2 sz = new Vector2(1, 1);
+                //I dont 
+                try
+                {
+                    sz = font.MeasureString(textList[i]);
+                }
+                catch(System.Exception e)
+                {
+
+                }
+                yStep = sz.Y;
 
                 var pos = Owner.rect.Position + new Vector2(xOffset * scale.X, Owner.rect.Size.Y - (yStep*scale.Y) - (yOffset * scale.Y) - (spotIncr * yStep * scale.Y));
                 if (Owner.rect.Bounds.Contains(pos))

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>C:/Users/CJ/source/repos/Engine/GameExample/bin/DesktopGL/AnyCPU/Debug/../../../../Content/Fonts/defaultFont.spritefont</SourceFile>
-  <SourceTime>2019-06-02T18:20:24.5588786-04:00</SourceTime>
-  <DestFile>C:/Users/CJ/source/repos/Engine/GameExample/bin/DesktopGL/AnyCPU/Debug/Content/Fonts/../../../../Content/Fonts/defaultFont.xnb</DestFile>
-  <DestTime>2019-06-02T18:20:27.3398729-04:00</DestTime>
+  <SourceTime>2019-06-02T18:17:55.0675731-04:00</SourceTime>
+  <DestFile>C:/Users/CJ/source/repos/Engine/GameExample/bin/DesktopGL/AnyCPU/Debug../../Content/Fonts/../../../../Content/Fonts/defaultFont.xnb</DestFile>
+  <DestTime>2019-06-02T18:18:47.4490428-04:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2018-12-08T11:35:54-05:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>

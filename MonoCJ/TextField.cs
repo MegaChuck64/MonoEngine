@@ -20,7 +20,8 @@ namespace MonoCJ
 
         public bool isSelected;
 
-        public TextField (GameObject owner, SpriteFont fnt, string msg, Color clr, int x, int y) : base(owner)
+
+        public TextField (GameObject owner, SpriteFont fnt, string msg, Color clr, int x, int y, string name = null) : base(owner, name)
         {
             text = msg;
             font = fnt;
@@ -30,14 +31,14 @@ namespace MonoCJ
 
             drawLayer = 0.2f;
             startWindowSize = owner.game.Window.ClientBounds.Size.ToVector2();
+
         }
 
         public void Update(float dt)
         {
             if (Input.mouse.LeftButton == Microsoft.Xna.Framework.Input.ButtonState.Pressed)
             {
-                isSelected = (Owner.rect.Bounds.Contains(Input.mouse.Position));
-                
+                isSelected = (Owner.rect.Bounds.Contains(Input.mouse.Position));                
             }
         }
 

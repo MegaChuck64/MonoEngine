@@ -10,8 +10,7 @@ namespace GameExample
 {
     public static class Account
     {
-
-        public static async Task<string> RegisterDomain(string ip, string url)
+        public static async Task<string> RegisterDomainAsync(string ip, string url)
         {
             string result = "";
 
@@ -48,36 +47,36 @@ namespace GameExample
             return result;
         }
 
-        public static async Task<string> GetIP(string url)
+        public static async Task<string> GetIPAsync(string url)
         {
             var ip = "";
 
             try
             {
 
-            
-            var request = new GetUserDataRequest
-            {
-                Keys = new List<string>() { url },
-            };
 
-            var data = PlayFabClientAPI.GetUserDataAsync(request);
+                var request = new GetUserDataRequest
+                {
+                    Keys = new List<string>() { url },
+                };
 
-            await data.ContinueWith((x) =>
-            {
-                if (data.Result.Error != null)
+                var data = PlayFabClientAPI.GetUserDataAsync(request);
+
+                await data.ContinueWith((x) =>
                 {
-                    ip = "ERROR -- " + data.Result.Error.ErrorMessage;
-                }
-                else if (data.Result.Result != null)
-                {
-                    ip = data.Result.Result.Data[url].Value;
-                }
-            });
+                    if (data.Result.Error != null)
+                    {
+                        ip = "ERROR -- " + data.Result.Error.ErrorMessage;
+                    }
+                    else if (data.Result.Result != null)
+                    {
+                        ip = data.Result.Result.Data[url].Value;
+                    }
+                });
 
 
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 ip = "ERROR -- " + e.Message;
             }
@@ -119,6 +118,5 @@ namespace GameExample
             return result;
 
         }
-
     }
 }

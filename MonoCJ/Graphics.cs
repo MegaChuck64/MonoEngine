@@ -55,13 +55,13 @@ namespace MonoCJ
 
             try
             {
-                System.Net.HttpWebRequest webRequest = (System.Net.HttpWebRequest)System.Net.HttpWebRequest.Create(url);
+                System.Net.HttpWebRequest webRequest = (System.Net.HttpWebRequest)System.Net.WebRequest.Create(url);
                 webRequest.AllowWriteStreamBuffering = true;
                 webRequest.Timeout = 30000;
 
                 System.Net.WebResponse webResponse = webRequest.GetResponse();
 
-                System.IO.Stream stream = webResponse.GetResponseStream();
+                Stream stream = webResponse.GetResponseStream();
 
                 image = Texture2D.FromStream(game.GraphicsDevice, stream);
 
@@ -95,8 +95,10 @@ namespace MonoCJ
 +
                  @"<UseKerning>true</UseKerning>"
 +
-                 @"<Style>Regular</Style>"
+                @"<Style>Regular</Style>"
 +
+                @"<DefaultCharacter>*</DefaultCharacter>"
+ +
                  @"<CharacterRegions>"
 +
                      @"<CharacterRegion>"
@@ -124,8 +126,8 @@ namespace MonoCJ
             }
 
 
-            string outputDir = Directory.GetCurrentDirectory() + @"\x86\Debug\Content\Fonts\";
-
+            string outputDir = Directory.GetCurrentDirectory() + @"\Content\Fonts\";
+            
             var proc = new Process()
             {
                 StartInfo = new ProcessStartInfo()
@@ -140,8 +142,10 @@ namespace MonoCJ
 
 
             proc.Start();
-            string ret = proc.StandardOutput.ReadToEnd();
             proc.WaitForExit();
+
+            string ret = proc.StandardOutput.ReadToEnd();
+
         }
     }
 }

@@ -19,8 +19,8 @@ C:\Users\CJ\source\repos\Engine\MonoCJ\bin\Debug\Newtonsoft.Json.dll
 C:\Users\CJ\source\repos\Engine\MonoCJ\bin\Debug\Lidgren.Network.pdb
 C:\Users\CJ\source\repos\Engine\MonoCJ\bin\Debug\MonoGame.Framework.xml
 C:\Users\CJ\source\repos\Engine\MonoCJ\bin\Debug\Newtonsoft.Json.xml
-C:\Users\CJ\source\repos\Engine\MonoCJ\obj\Debug\MonoEngine.csprojAssemblyReference.cache
 C:\Users\CJ\source\repos\Engine\MonoCJ\obj\Debug\MonoEngine.csproj.CoreCompileInputs.cache
 C:\Users\CJ\source\repos\Engine\MonoCJ\obj\Debug\MonoEngine.csproj.CopyComplete
 C:\Users\CJ\source\repos\Engine\MonoCJ\obj\Debug\MonoCJ.dll
 C:\Users\CJ\source\repos\Engine\MonoCJ\obj\Debug\MonoCJ.pdb
+C:\Users\CJ\source\repos\Engine\MonoCJ\obj\Debug\MonoEngine.csprojAssemblyReference.cache

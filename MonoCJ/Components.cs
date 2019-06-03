@@ -1,5 +1,7 @@
 ﻿
 using Microsoft.Xna.Framework.Graphics;
+using System;
+using System.Collections.Generic;
 
 namespace MonoCJ
 {
@@ -7,11 +9,20 @@ namespace MonoCJ
     {
         public GameObject Owner { get; private set; }
 
+        public string name = "";
+
         public float drawLayer = 0;
 
-        public Component(GameObject owner)
+        public Component(GameObject owner, string name = null)
         {
             Owner = owner;
+            if (name == null)
+            {
+                var tp = GetType();
+
+                name = tp.ToString() + owner.components.FindAll(c=>c.GetType() == GetType()).Count;
+            }
+
         }
     }
 

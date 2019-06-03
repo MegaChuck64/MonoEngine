@@ -37,11 +37,13 @@ namespace MonoCJ
             config = new NetPeerConfiguration("Client")
             { Port = 6666 };
 
+            Disconnect();
 
             server = new NetServer(config);
 
-            Disconnect();
+            // instead of not connecting anymore
 
+            //just change the connection in the database and kick everyone off
             server.Start();
 
             //game.Debug.Log("Server Connected.");
@@ -52,6 +54,8 @@ namespace MonoCJ
         {
             if (server != null)
             server.Shutdown("Server Disconnected[Exit Message].");
+
+            server = null;
         }
 
 

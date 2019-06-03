@@ -17,15 +17,15 @@ namespace MonoCJ
 
         public Color tint;
 
-        public GameObject(MonoGame gme, int x, int y, int width, int height, Color? tnt = null)
+        public GameObject(MonoGame gme, int x, int y, int width, int height, Color? tnt = null, float drawLayer = 0f)
         {
             game = gme;
 
             tint = tnt == null ? Color.Transparent : tnt.Value;
 
-            rect = new Rect(this, x, y, width, height, Graphics.RandomColor());
+            rect = new Rect(this, x, y, width, height, tnt == Color.Transparent ? Color.Black : tint);
 
-
+            rect.drawLayer = drawLayer;
         }
 
         public void Update(float dt)
@@ -70,5 +70,7 @@ namespace MonoCJ
 
             return comps.Cast<T>().ToList();
         }
+
+   
     }
 }

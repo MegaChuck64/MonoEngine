@@ -36,7 +36,7 @@ namespace MonoCJ
 
         public MonoGame(string fontName, int fontSize, int resolutionWidth, int resolutionHeight)
         {
-            graphics = new GraphicsDeviceManager(this);
+            graphics = new GraphicsDeviceManager(this);         
             Content.RootDirectory = "Content";
 
 
@@ -66,6 +66,8 @@ namespace MonoCJ
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            Graphics.Init(this);
+
             try
             {
                 defaultFont = Content.Load<SpriteFont>(@"Fonts\defaultFont");
@@ -77,8 +79,6 @@ namespace MonoCJ
             }
 
             mainCamera = new Camera();
-
-            Graphics.Init(this);
 
             Window.ClientSizeChanged += new EventHandler<EventArgs>(OnResize);
 

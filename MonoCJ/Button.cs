@@ -1,10 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MonoCJ
 {
@@ -51,11 +46,11 @@ namespace MonoCJ
                     //new Point((int)(Settings.scale * relativeBounds.Size.X),(int)(Settings.scale * relativeBounds.Size.Y)));
             }
         }
-        public Button(GameObject owner, Rectangle bounds, SpriteFont fnt, string label, Color clr, OnRelease releaseAction) : base(owner)
+        public Button(GameObject owner, Rectangle bounds, SpriteFont fnt, string label, Color clr, OnRelease releaseAction, string name = null) : base(owner, name)
         {
             relativeBounds = bounds;
             idleColor = clr;
-            texture = Graphics.TextureFromURL(@"https://wiki.industrial-craft.net/images/4/49/MachineGUI_Background.png");
+            texture = Graphics.TextureFromURL(@"https://megachuck64.github.io/assets/defaultButton.png");
             text = label;
             drawLayer = 0.1f;
             font = fnt;
@@ -63,11 +58,6 @@ namespace MonoCJ
             onRelease = releaseAction;
         }
 
-
-        void Test()
-        {
-
-        }
         public void Update(float dt)
         {
 

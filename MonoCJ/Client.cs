@@ -33,6 +33,7 @@ namespace MonoCJ
             if (client != null)
             client.Disconnect("Client Disconnected[Exit Message].");
 
+            client = null;
             //game.Debug.Log("Client Disconnected");
 
         }
