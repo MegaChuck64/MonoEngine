@@ -37,7 +37,10 @@ namespace MonoCJ
             PreserveResolution();
         }
 
- 
+        public static Vector2 GetPanelSize(float widthPercent, float heightPercent)
+        {
+            return new Vector2((int)MathUtils.Percentage(widthPercent, Settings.WindowWidth), (int)MathUtils.Percentage(heightPercent, Settings.WindowHeight));
+        }
 
         public static void PreserveResolution()
         {

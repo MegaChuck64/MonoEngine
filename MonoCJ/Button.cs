@@ -60,8 +60,6 @@ namespace MonoCJ
 
         public void Update(float dt)
         {
-
-
             if (destination.Contains(Input.mouse.Position))
             {
                 if (Input.mouse.LeftButton == Microsoft.Xna.Framework.Input.ButtonState.Pressed)

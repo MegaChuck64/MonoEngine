@@ -56,13 +56,18 @@ namespace MonoCJ
             listNdx = textList.Count - 1;
             
         }
+
+
+
         public void Draw(SpriteBatch sb)
         {
             var scale = Owner.game.Window.ClientBounds.Size.ToVector2() / startWindowSize;
 
             int spotIncr = 0;
-            for (int i = listNdx; i >= 0; i--)
+
+           for (int i = listNdx; i >= 0; i--)
             {
+                if (textList.Count == 0) continue;
                 Vector2 sz = new Vector2(1, 1);
                 //I dont 
                 try
@@ -75,7 +80,8 @@ namespace MonoCJ
                 }
                 yStep = sz.Y;
 
-                var pos = Owner.rect.Position + new Vector2(xOffset * scale.X, Owner.rect.Size.Y - (yStep*scale.Y) - (yOffset * scale.Y) - (spotIncr * yStep * scale.Y));
+                var pos = Owner.rect.Position + new Vector2(xOffset , (Owner.rect.Size.Y * scale.Y) - (spotIncr * yStep) - yStep);
+
                 if (Owner.rect.Bounds.Contains(pos))
                 {
                     sb.DrawString(

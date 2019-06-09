@@ -198,7 +198,7 @@ namespace GameExample
 
             controlPanel.rect.Position = Vector2.Zero;
 
-            controlPanel.rect.Size = GetPanelSize(0.2f, .9f);
+            controlPanel.rect.Size = Settings.GetPanelSize(0.2f, .8f);
 
 
 
@@ -221,17 +221,17 @@ namespace GameExample
             //var urlText = controlPanel.GetComponent<TextField>();
             
             nameText.rect.Position = new Vector2(0, controlPanel.rect.Bounds.Height);
-            nameText.rect.Size = GetPanelSize(0.2f, 0.1f);
+            nameText.rect.Size = Settings.GetPanelSize(0.2f, 0.1f);
 
 
             messagePanel.rect.Position = new Vector2(controlPanel.rect.Bounds.Width, 0);
 
-            messagePanel.rect.Size = GetPanelSize(0.6f, 0.75f);
+            messagePanel.rect.Size = Settings.GetPanelSize(0.6f, 0.75f);
 
 
             outputPanel.rect.Position = new Vector2(controlPanel.rect.Bounds.Width, messagePanel.rect.Bounds.Height);
 
-            outputPanel.rect.Size = GetPanelSize(0.6f, 0.25f);
+            outputPanel.rect.Size = Settings.GetPanelSize(0.6f, 0.25f);
 
         }
 
@@ -378,10 +378,6 @@ namespace GameExample
             return ("ERROR -- No IPv4 found.");
         }
 
-        public Vector2 GetPanelSize(float widthPercent, float heightPercent)
-        {
-            return new Vector2((int)MathUtils.Percentage(widthPercent, Settings.WindowWidth), (int)MathUtils.Percentage(heightPercent, Settings.WindowHeight));
-        }
 
         public void ScrollMessages(bool up)
         {

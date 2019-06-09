@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/CJ/source/repos/Engine/LightController/bin/DesktopGL/AnyCPU/Debug/../../../../Content/Fonts/defaultFont.spritefont</SourceFile>
+  <SourceTime>2019-06-03T19:55:47.8026131-04:00</SourceTime>
+  <DestFile>C:/Users/CJ/source/repos/Engine/LightController/bin/DesktopGL/AnyCPU/Debug/AnyCPU/Debug/Content/Fonts/../../../../Content/Fonts/defaultFont.xnb</DestFile>
+  <DestTime>2019-06-03T19:55:56.4746929-04:00</DestTime>
+  <Importer>FontDescriptionImporter</Importer>
+  <ImporterTime>2018-12-08T11:35:54-05:00</ImporterTime>
+  <Processor>FontDescriptionProcessor</Processor>
+  <ProcessorTime>2018-12-08T11:35:54-05:00</ProcessorTime>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

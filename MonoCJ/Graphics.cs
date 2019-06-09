@@ -75,6 +75,9 @@ namespace MonoCJ
             return image;
         }
 
+
+
+
         public static void CreateFontAsset(string name, int size)
         {
 
@@ -126,7 +129,7 @@ namespace MonoCJ
             }
 
 
-            string outputDir = Directory.GetCurrentDirectory() + @"\Content\Fonts\";
+            string outputDir = Directory.GetCurrentDirectory() + @"\AnyCPU\Debug\Content\Fonts\";
             
             var proc = new Process()
             {
